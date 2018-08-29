@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+  background-size: cover;
+  width: 95vw;
+  height: 90vh;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px,1fr));
+  grid-template-rows: auto;
+  align-content: center;
+  justify-content: center;
+  grid-template-areas: "Bg Search Search"
+                        "Bg WeatherReport WeatherReport" ;
+  grid-gap: 1rem;
+  background: linear-gradient(to right, #242424, #636363);
+}
+
+.Bg{
+  grid-area: Bg;
+  background-image: url(./img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 90vh;
+  position: relative;
+}
+
+.Bg h1{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-transform: uppercase;
+
+}
+
+
+
+
+
+@media (max-width: 800px){
+
+  .App{
+    grid-template-columns: repeat(1, minmax(300px,1fr));
+    grid-template-areas: "Bg"
+                        "Search"
+                        "WeatherReport";
+
+    width: 100%;
+
+  }
+
+  .Bg{
+    height: 10vh;
+
+  }
+  
+
+  
+}
+
